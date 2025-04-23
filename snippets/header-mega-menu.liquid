@@ -21,7 +21,8 @@
                     class="header__active-menu-item"
                   {% endif %}
                 >
-                  {{- link.title | escape -}}
+ <a href="{{ link.url }}" class="site-nav__link site-nav__link--underline{% if has_dropdown %} site-nav__link--has-dropdown{% endif %}">
+                  {{- link.title | escape -}}</a>
                 </span>
                 {{- 'icon-caret.svg' | inline_asset_content -}}
               </summary>
